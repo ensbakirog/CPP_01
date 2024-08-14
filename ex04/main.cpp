@@ -2,9 +2,6 @@
 #include <fstream>
 #include <cstdlib>
 
-#define ARG_ERR "Error: ./NameOfProgram <NameOfFile> <String_1> <String_2>\n"
-#define FILE_ERR "Error: Can not open the file\n"
-
 void Replacer(std::string str, std::string old_str, std::string new_str, std::ofstream& file)
 {
 	size_t pos = str.find(old_str);
@@ -20,7 +17,7 @@ void Replacer(std::string str, std::string old_str, std::string new_str, std::of
 int main(int argc, char const *argv[])
 {
 	if (argc != 4)
-		return (std::cerr << ARG_ERR, EXIT_FAILURE);
+		return (std::cerr << "Error: ./NameOfProgram <NameOfFile> <String_1> <String_2>\n", EXIT_FAILURE);
 
 	std::string DestFileName = argv[1];
 
@@ -30,11 +27,11 @@ int main(int argc, char const *argv[])
 
 	std::ifstream SourceFile(argv[1]);
 	if (!SourceFile.is_open())
-		return (std::cerr << FILE_ERR, EXIT_FAILURE);
+		return (std::cerr << "Error: Can not open the file\n", EXIT_FAILURE);
 
 	std::ofstream DestFile(DestFileName.c_str());
 	if (!DestFile.is_open())
-		return (SourceFile.close(), std::cerr << FILE_ERR, EXIT_FAILURE);
+		return (SourceFile.close(), std::cerr << "Error: Can not open the file\n", EXIT_FAILURE);
 	
 	std::string line;
 	std::string old_string = argv[2];
