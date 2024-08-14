@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <cstdlib>
 
 #define ARG_ERR "Error: ./NameOfProgram <NameOfFile> <String_1> <String_2>\n"
 #define FILE_ERR "Error: Can not open the file\n"
@@ -31,7 +32,7 @@ int main(int argc, char const *argv[])
 	if (!SourceFile.is_open())
 		return (std::cerr << FILE_ERR, EXIT_FAILURE);
 
-	std::ofstream DestFile(DestFileName);
+	std::ofstream DestFile(DestFileName.c_str());
 	if (!DestFile.is_open())
 		return (SourceFile.close(), std::cerr << FILE_ERR, EXIT_FAILURE);
 	
