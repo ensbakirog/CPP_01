@@ -43,8 +43,9 @@ int main(int argc, char const *argv[])
 	{
 		if (line.find(old_string) == std::string::npos)
 		{
+			DestFile << line;
 			if (!SourceFile.eof())
-				DestFile << line << std::endl;
+				DestFile << std::endl;
 		}
 		else
 		{

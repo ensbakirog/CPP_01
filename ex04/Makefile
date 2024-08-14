@@ -2,7 +2,7 @@ NAME	:= replace
 
 FLAGS	:= -Wall -Wextra -Werror -std=c++98 #-g
 
-CC		:= g++
+CC		:= c++
 RM		:= rm -rf
 
 SRC		:= main.cpp
