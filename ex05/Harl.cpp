@@ -26,7 +26,7 @@ void Harl::error(void) {
 }
 
 void ErrorMsg( std::string level ) {
-    std::cout << WHITE_BOLD << level << RESET << " is invalid level" << std::endl;
+    std::cerr << WHITE_BOLD << level << RESET << " is invalid level" << std::endl;
 }
 
 void Harl::complain( std::string level ) {

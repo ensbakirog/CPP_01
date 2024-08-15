@@ -17,7 +17,7 @@ void Replacer(std::string str, std::string old_str, std::string new_str, std::of
 int main(int argc, char const *argv[])
 {
 	if (argc != 4)
-		return (std::cerr << "Error: ./NameOfProgram <NameOfFile> <String_1> <String_2>\n", EXIT_FAILURE);
+		return (std::cerr << "Usage: ./NameOfProgram <NameOfFile> <String_1> <String_2>\n", EXIT_FAILURE);
 
 	std::string DestFileName = argv[1];
 
