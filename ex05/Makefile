@@ -1,11 +1,11 @@
-NAME	:= Zombie
+NAME	:= harl
 
 FLAGS	:= -Wall -Wextra -Werror -std=c++98 #-g
 
 CC		:= c++
 RM		:= rm -rf
 
-SRC		:= Zombie.cpp main.cpp newZombie.cpp randomChump.cpp
+SRC		:= main.cpp Harl.cpp
 OBJ		:= $(SRC:.cpp=.o)
 
 RED		:= \033[31m
