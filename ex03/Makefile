@@ -5,7 +5,7 @@ FLAGS	:= -Wall -Wextra -Werror -std=c++98 #-g
 CC		:= c++
 RM		:= rm -rf
 
-SRC		:= HumanA.cpp HumanB.cpp Weapon.cpp main.cpp
+SRC		:= main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 OBJ		:= $(SRC:.cpp=.o)
 
 RED		:= \033[31m

@@ -1,6 +1,12 @@
 #include "HumanB.hpp"
+#include <iostream>
 
-void HumanB::attack() const
-{
-	std::cout << name << " attacks with their " << Weapon.getType() << std::endl;
+HumanB::HumanB( std::string name ) : name(name) {}
+
+void HumanB::attack() const {
+	std::cout << this->name << " attacks with their " << this->weapon.getType() << std::endl;
+}
+
+void HumanB::setWeapon( Weapon& weapon ) {
+	this->weapon = weapon;
 }
